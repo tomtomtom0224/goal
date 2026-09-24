@@ -1,0 +1,132 @@
+.media-figure{
+    width: 50%;       /* 親要素の幅いっぱいに広げる場合 */
+    max-width: 500px;  /* 画像の最大幅を指定 */
+    height: auto;      /* 縦横比を維持して自動調整 */
+}
+/* 入力ボックス全体の基本スタイル */
+input[type="text"],
+/* 日付入力欄の幅を一定に揃える */
+input[type="date"] {
+  width: 160px; /* お好みの幅に調整してください */
+  box-sizing: border-box;
+}
+textarea {
+  width: 100%;             /* 横幅いっぱいに広げる */
+  padding: 8px 12px;       /* 内側の余白 */
+  border: 1px solid #ccc;  /* 薄いグレーの枠線 */
+  /*border-radius: 4px;      /* 角を少し丸くする */*/
+  font-size: 14px;
+  box-sizing: border-box;  /* 枠線を含めたサイズ計算 */
+}
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: white;
+  margin: auto;
+}
+
+/* 印刷実行時の余白設定 */
+@page {
+  size: A4;
+  margin: 0;
+}
+/* フォーカス（クリック）したときに青く光らせる */
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+/* 親要素をFlexboxにする */
+.container {
+    display: flex;
+    align-items: center;    /* 垂直方向の位置を中央に揃える（上部に揃えたい場合は flex-start） */
+    gap: 20px;              /* 要素と要素の間のすき間をあける */
+}
+
+/* 親要素をFlexboxにする */
+.profile-container {
+    display: flex;
+    align-items: center;    /* 垂直方向の位置を中央に揃える（上部に揃えたい場合は flex-start） */
+    justify-content: space-between;
+    gap: 20px;              /* 要素と要素の間のすき間をあける */
+}
+
+/* ラベルとテキストボックスを横並びにする */
+.form-group {
+  display: flex;            /* 横並びにする */
+  align-items: center;      /* 上下の中央揃え */
+  gap: 12px;                /* ラベルと入力欄の間の隙間 */
+  margin-bottom: 16px;      /* 次の行との間の余白 */
+}
+.form-group label {
+  white-space: nowrap;      /* ラベルが途中で改行されるのを防ぐ */
+  min-width: 100px;         /* 必要に応じてラベル幅を統一 */
+}
+.form-group input[type="date"] {
+  width: 200px; 
+  /*flex: 1;                  /* 残りの幅いっぱいに伸ばす場合 */
+  /* もし幅を固定したい場合は flex: 1 の代わりに width: 200px; など */
+}
+
+/*----------------------------------------------------------------------*/
+/* 表全体の基本デザイン */
+.fim-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 枠線と余白設定 */
+.fim-table th, 
+.fim-table td {
+  border: 1px solid #333;
+  padding: 6px 8px;
+}
+
+/* ヘッダーの背景 */
+.fim-table th {
+  background-color: #f2f2f2;
+}
+
+/* 「運動」「認知」を縦書きにする設定 */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+/* 小計・合計行の太字設定 */
+.subtotal-row, .total-row {
+  font-weight: bold;
+  background-color: #fafafa;
+}
+
+/* 表の中のプルダウン装飾 */
+.fim-table select {
+  width: 100%;             /* セルいっぱいに広げる */
+  padding: 4px;            /* 内側の余白 */
+  font-size: 14px;         /* 文字サイズ */
+  border: 1px solid #ccc;  /* 枠線の色 */
+  border-radius: 4px;      /* 角を少し丸くする */
+  background-color: #fff;  /* 背景色 */
+}
+
+/* フォーカス（選択中）の枠線カラー */
+.fim-table select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* 自己PRをカード化する */
+.pr-card {
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  margin-top: 0px;
+}
+
+.profile-row {
+  display: flex;
+}
